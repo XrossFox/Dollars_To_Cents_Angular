@@ -27,33 +27,32 @@ export class DollarsComponent implements OnInit {
     this.interchng.pennies = 0;
     this.interchng.quarters = 0;
 
-    let coins: number;
-    coins = this.dollars * 100;
-  
-    while(coins != 0){  
+    let tmp: number = Math.trunc(this.dollars * 100);
 
-      // if the amount of coins is divisible by 25, 10 or 5, then a 
+    while(!(tmp <= 0)){  
+
+      // if the amount of tmp is divisible by 25, 10 or 5, then a 
       // coin of that value is added and they are removed from the current tally
-      // if no coin is divisible, then you only have dimes.
-
-      if(coins % 25 == 0){
+      // if no coin is divisible, then you only have pennies
+      
+      if(tmp >= 25){
         this.interchng.quarters++;
-        coins -= 25;
+        tmp -= 25;
         continue;
       }
-      if(coins % 10 == 0){
+      if(tmp >= 10){
         this.interchng.dimes++;
-        coins -= 10;
+        tmp -= 10;
         continue;
       }
-      if(coins % 5 == 0){
+      if(tmp >= 5){
         this.interchng.nickels++;
-        coins -= 10;
+        tmp -= 5;
         continue;
       }
-      this.interchng.pennies += coins;
-      coins -= coins;
-
+      this.interchng.pennies += tmp;
+      tmp -= tmp;
+      
     }
 
   }

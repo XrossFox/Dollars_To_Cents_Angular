@@ -1,4 +1,7 @@
 <h3>Here are your coins!</h3>
 <div>
-    <input *ngIf="this.in"/>
+    <input *ngIf="this.getQuarters() || this.getQuarters() == 0" [attr.disabled]="true" [attr.value]="this.getQuarters() + ' Quarter/s'"/>
+    <input *ngIf="this.getDimes() || this.getDimes() == 0" [attr.disabled]="true" [attr.value]="this.getDimes() + ' Dime/s'"/>
+    <input *ngIf="this.getNickels() || this.getNickels() == 0" [attr.disabled]="true" [attr.value]="this.getNickels() + ' Nickel/s'"/>
+    <input *ngIf="this.getPennies() || this.getPennies() == 0" [attr.disabled]="true" [attr.value]="this.getPennies() + ' Penny/ies'"/>
 </div>

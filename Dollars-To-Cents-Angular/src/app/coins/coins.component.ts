@@ -11,8 +11,19 @@ export class CoinsComponent implements OnInit {
   constructor(private interchng: InterchangeService) { }
 
   getQuarters(): number{
-
     return this.interchng.quarters;
+  }
+
+  getDimes(): number{
+    return this.interchng.dimes;
+  }
+  
+  getNickels(): number{
+    return this.interchng.nickels;
+  }
+
+  getPennies(): number{
+    return this.interchng.pennies;
   }
 
   ngOnInit(): void {
