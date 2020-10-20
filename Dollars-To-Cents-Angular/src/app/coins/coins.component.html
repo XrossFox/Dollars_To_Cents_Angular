@@ -1,7 +1,18 @@
-<h3>Here are your coins!</h3>
-<div>
-    <input *ngIf="this.getQuarters() || this.getQuarters() == 0" [attr.disabled]="true" [attr.value]="this.getQuarters() + ' Quarter/s'"/>
-    <input *ngIf="this.getDimes() || this.getDimes() == 0" [attr.disabled]="true" [attr.value]="this.getDimes() + ' Dime/s'"/>
-    <input *ngIf="this.getNickels() || this.getNickels() == 0" [attr.disabled]="true" [attr.value]="this.getNickels() + ' Nickel/s'"/>
-    <input *ngIf="this.getPennies() || this.getPennies() == 0" [attr.disabled]="true" [attr.value]="this.getPennies() + ' Penny/ies'"/>
+
+<div class="input-group col-6 mt-2">
+    <div class="col-12">
+        <h3>Here are your coins!</h3>
+    </div>
+    <div class="col-12">
+        <input *ngIf="this.getQuarters() || this.getQuarters() == 0" class="form-control col-6 mt-1" [attr.disabled]="true" [attr.value]="this.getQuarters() + ' Quarter/s'"/>
+    </div>
+    <div class="col-12">
+        <input *ngIf="this.getDimes() || this.getDimes() == 0" class="form-control col-6 mt-2" [attr.disabled]="true" [attr.value]="this.getDimes() + ' Dime/s'"/>
+    </div>
+    <div class="col-12">
+        <input *ngIf="this.getNickels() || this.getNickels() == 0" class="form-control col-6 mt-2" [attr.disabled]="true" [attr.value]="this.getNickels() + ' Nickel/s'"/>
+    </div>
+    <div class="col-12">
+        <input *ngIf="this.getPennies() || this.getPennies() == 0" class="form-control col-6 mt-2" [attr.disabled]="true" [attr.value]="this.getPennies() + ' Penny/ies'"/>
+    </div>
 </div>
